@@ -1,0 +1,6 @@
+Given an API returning a list of todos, we want to fetch the list, create a separate block for each user, and display their todos in the appropriate block. Use this endpoint URL to get the todos: https://dummyjson.com/todos?limit=10&skip=80. It will return the following structure with a total of 10 todos: { “todos”: [ { “id”: 1, “todo”: “Do something nice for someone I care about”, “completed”: true, “userId”: 26 }, ], } Each block should contain the userId as the title of the block and the list of todos.
+
+Alog:
+//1.Fetch all the todos from B.E->make an api request
+//2.create a new Data structure that stores todos in such a way that userId should be the key and all todos with his user id should be stored in an array as its value.
+//render each object in a block  for that create a component that'll render user
