@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 
 import './App.css'
+import PersonComponent from './PersonComponent'
 
 function App() {
   const [todos, setTodos] = useState([])
@@ -19,7 +20,7 @@ function App() {
     const fetchTodos = async()=>{
       const res = await fetch('https://dummyjson.com/todos?limit=10&skip=80')
       const data = await res.json()
-      console.log(data);
+     // console.log(data);
       setTodos(data.todos)
       
     }
@@ -35,20 +36,18 @@ function App() {
       
     return accumulator;
   },{})
-  console.log(newDS);
+  //console.log(newDS);
   
   return (
     <div>
         <h2>Todos</h2>
-        {todos.map((myTodo:todoType)=>(
-          <div key={myTodo.id}>
-            <h1>{myTodo?.userId}</h1>
-            <h4>
-              {myTodo.todo}
-            </h4>
-
-          </div>
-        ))}
+        <div className='flex flex-direction-row'>
+        {Object.entries(newDS).map((entry)=>{
+          let userId= entry[0]
+          let value = entry[1]
+          return <PersonComponent userId={userId} value={value}/>
+        })}
+        </div>
     </div>
   )
 }
