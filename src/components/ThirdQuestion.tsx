@@ -31,11 +31,23 @@ const ThirdQuestion = () => {
         setProducts(filteredProducts)
         
     }
+    const onCompleted=(cId)=>{
+console.log('completed called on parent');
+const tempList =[...products]
+const targetProduct = tempList.find(product=>product.id===cId)
+console.log(targetProduct);
+
+targetProduct.completed=!targetProduct.completed
+setProducts(tempList)
+console.log(products);
+
+
+    }
   return (
     <div className='content-center'>
       <h2>Products Page</h2>
       <div className='products-list'>
-        {products.map((product)=>(<Product key={product.id} data={product} onDelete={onDelete}/>))}
+        {products.map((product)=>(<Product key={product.id} data={product} onDelete={onDelete} onCompleted={onCompleted}/>))}
       </div>
     </div>
   )

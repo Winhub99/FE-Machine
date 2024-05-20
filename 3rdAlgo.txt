@@ -3,5 +3,5 @@ Using this API endpoint - https://dummyjson.com/products, Display the data in a 
 step 1: fetch products from b.each
 step 2:modify the data -> add field completed false to each products
 step3: render all products in a list 
-step4: crete delete functionality
+step4: create delete functionality
 step5: create completed functionality
