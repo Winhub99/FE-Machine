@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import Product from './Product'
 
 const ThirdQuestion = () => {
     const [products, setProducts] = useState([])
@@ -21,9 +22,21 @@ const ThirdQuestion = () => {
         fetchProducts()
     },[])
 
+    const onDelete=(pId)=>{
+        console.log('deleted reached the parent');
+        console.log("The id of item to be deleted is: ",pId);
+        
+        const filteredProducts = products.filter(product=> product.id !=pId)
+        console.log(filteredProducts);
+        setProducts(filteredProducts)
+        
+    }
   return (
     <div className='content-center'>
       <h2>Products Page</h2>
+      <div className='products-list'>
+        {products.map((product)=>(<Product key={product.id} data={product} onDelete={onDelete}/>))}
+      </div>
     </div>
   )
 }
