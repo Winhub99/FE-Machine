@@ -7,9 +7,16 @@ const ThirdQuestion = () => {
         const fetchProducts= async()=>{
             const response = await fetch('https://dummyjson.com/products')
             const data = await response.json()
-            console.log(products);
-            setProducts(data.products)
-            console.log(products);            
+            const productsWithCompletedField = data.products.reduce((acc,curr)=>{
+
+                curr.completed=false
+                 acc.push(curr)
+                // return acc
+                return acc
+            },[])
+            console.log(productsWithCompletedField);
+            
+            setProducts(productsWithCompletedField)
         }
         fetchProducts()
     },[])
