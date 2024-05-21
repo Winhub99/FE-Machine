@@ -1,13 +1,12 @@
-import React from 'react'
 
 const Product = ({data,onDelete,onCompleted}) => {
-    const deleteProduct=(id)=>{
+    const deleteProduct=(id:number)=>{
         console.log('dekete ckicked');
         
         onDelete(id)
     }
 
-    const handleCompletedChange= (id)=>{
+    const handleCompletedChange= (id:number)=>{
         console.log('checkbox clicked');
         
         onCompleted(id)
