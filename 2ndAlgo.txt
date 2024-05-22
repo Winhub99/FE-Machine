@@ -7,3 +7,69 @@ step2
 fetch data from both apis 
 step3
 merge both data and remove duplicate entries. 
+
+
+
+
+
+Mock APIs
+javascript
+Copy code
+const api1 = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve([
+        { name: 'ABC', marks: '98%', registrationID: '1234' },
+        { name: 'DEF', marks: '88%', registrationID: '5678' },
+        { name: 'GHI', marks: '76%', registrationID: '9101' },
+      ]);
+    }, 1000);
+  });
+};
+
+const api2 = () => {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve([
+        { name: 'JKL', marks: '85%', registrationID: '1121' },
+        { name: 'ABC', marks: '98%', registrationID: '1234' }, // duplicate
+        { name: 'MNO', marks: '92%', registrationID: '3141' },
+      ]);
+    }, 1000);
+  });
+};
+Merging Data and Removing Duplicates
+Next, we will fetch data from both APIs, merge the results, and remove duplicates based on the registrationID.
+
+javascript
+Copy code
+const mergeAndRemoveDuplicates = async () => {
+  try {
+    const [studentsFromApi1, studentsFromApi2] = await Promise.all([api1(), api2()]);
+
+    const mergedData = [...studentsFromApi1, ...studentsFromApi2];
+    const uniqueStudents = {};
+
+    mergedData.forEach(student => {
+      uniqueStudents[student.registrationID] = student;
+    });
+
+    const uniqueStudentList = Object.values(uniqueStudents);
+
+    console.log('Merged and Deduplicated Student List:', uniqueStudentList);
+    return uniqueStudentList;
+  } catch (error) {
+    console.error('Error merging data:', error);
+  }
+};
+
+mergeAndRemoveDuplicates();
+Explanation
+Mock APIs:
+api1 and api2 return hardcoded lists of students after a delay to simulate asynchronous calls.
+Merging and Removing Duplicates:
+We use Promise.all to fetch data from both APIs concurrently.
+We merge the results using the spread operator.
+We then use an object uniqueStudents to store each student by their registrationID. This automatically removes duplicates because object keys must be unique.
+Finally, we convert the uniqueStudents object back into an array using Object.values.
+This approach ensures that we have a list of unique students without duplicates based on their registrationID. The mergeAndRemoveDuplicates function logs the final list to the console and returns it.
