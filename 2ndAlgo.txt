@@ -1,7 +1,7 @@
 Create 2 mock API’s which returns a list of students and each student has a name, some marks and a unique registration ID. Data from the 2 API’s can have common students i.e. mock API 1 can have a student as — ABC / 98% / 1234 (name / marks / registration ID) and this same data can be there in mock API 2 response as well. Now after creating these 2 API’s using Promises and hard-coded data, you need to merge the data coming from both API’s and have to delete the duplicates.
 
 step 1 
-create two api endpoints -each returnoing list of students
+create two api endpoints -each returning list of students
 where  student has name,ID,marks
 step2
 fetch data from both apis 
