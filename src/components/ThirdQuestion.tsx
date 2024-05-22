@@ -22,7 +22,7 @@ const ThirdQuestion = () => {
         fetchProducts()
     },[])
 
-    const onDelete=(pId)=>{
+    const onDelete=(pId: any)=>{
         console.log('deleted reached the parent');
         console.log("The id of item to be deleted is: ",pId);
         
@@ -31,7 +31,7 @@ const ThirdQuestion = () => {
         setProducts(filteredProducts)
         
     }
-    const onCompleted=(cId)=>{
+    const onCompleted=(cId: any)=>{
 console.log('completed called on parent');
 const tempList =[...products]
 const targetProduct = tempList.find(product=>product.id===cId)
