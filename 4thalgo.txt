@@ -1,0 +1,15 @@
+Implement pagination using this API endpoint - https://dummyjson.com/products,
+
+1.It should display 10 items on each page.
+2. The page which is active should show active state.
+3. It should have forward and Previous arrow on which we can change the page number.
+4. Handle loading state on each page change.
+5. When it's the first page the previous button should be disabled, similarly for last page.
+
+
+algo
+step 1 ) load all products
+step 2 now load only the first 10 
+step 3) create a navigation bar with prev and next button along with various page number aas buttons
+step 4) write handlers for whwn a btn(page number ) is clicked only that page's content is rendered
+step 5 ) enble/disable prev and nxt button when required 
