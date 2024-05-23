@@ -8,8 +8,8 @@ Implement pagination using this API endpoint - https://dummyjson.com/products,
 
 
 algo
-step 1 ) load all products
-step 2 now load only the first 10 
-step 3) create a navigation bar with prev and next button along with various page number aas buttons
-step 4) write handlers for whwn a btn(page number ) is clicked only that page's content is rendered
-step 5 ) enble/disable prev and nxt button when required 
+step 1) load all products
+step 2) now load only the first 10 
+step 3) create a navigation bar with prev and next button along with various page number as buttons
+step 4) write handlers for when a btn(page number ) is clicked only that page's content is rendered
+step 5) enble/disable prev and nxt button when required 
