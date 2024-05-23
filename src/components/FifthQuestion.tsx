@@ -2,10 +2,11 @@ import React, { useEffect, useState } from 'react'
 
 const FifthQuestion = () => {
     const [products,setProducts] = useState([])
+    const [page , setPage] = useState(3)
 
     useEffect(()=>{
         const fetchProducts= async()=>{
-            const response = await fetch('https://dummyjson.com/products')
+            const response = await fetch(`https://dummyjson.com/products?limit=10&skip=${page*10-10}`)
             const data = await response.json()
             console.log(data);
             setProducts(data.products)
