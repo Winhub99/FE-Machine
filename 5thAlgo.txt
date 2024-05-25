@@ -1,1 +1,9 @@
 https://dummyjson.com/products using this API, display products, create a sidebar Just like Flipkart UI, show checkboxes with label - 40% and more, 50% and more, 60% and more, 70% and more, When click on particular checkboxs it should filter the products according to the discount percentage, If no products available show a display message accordingly, there should also be a button to clear the selection of selected percentage, render the UI accordingly.
+
+My approach:
+1)Create parent component fullPage with two child components Product and sidebar
+1) create two components-
+    1.1) Product componet- will render all produxts
+    1.2)Sidebar component- will have checkboxes for all discounts availible
+2)Fetch all products and render on main page 
+3)On selecting a checkbox in sidebar only products with that discount should be rendered   
