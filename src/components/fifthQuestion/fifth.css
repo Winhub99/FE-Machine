@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    gap: 5px;
+}
+.sidebar{
+    width:20%;
+    border: 2px solid red;
+}
+.products{
+    width: 75%;
+    border: 2px solid rgb(106, 255, 0);
+
+}
