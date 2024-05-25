@@ -1,10 +1,13 @@
 import React from 'react'
+import Sidebar from './Sidebar'
+import ProductsList from './ProductsList'
 
 const MainComponent = () => {
   return (
-    <div>
-      HomePage
-    </div>
+    <>
+    <Sidebar/>
+    <ProductsList/>
+    </>
   )
 }
 
