@@ -1,9 +1,13 @@
 import React from 'react'
 
 const Sidebar = () => {
+    const discounts=[40,50,60,70]
   return (
     <div>
-      Sidebar
+      <h2>Discount</h2>
+        <div className="checkboxes">
+            {discounts.map((element)=>(<label >{element}%<input type='checkbox'/></label>))}
+        </div>
     </div>
   )
 }
