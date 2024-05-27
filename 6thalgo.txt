@@ -1,1 +1,7 @@
 Create a stopwatch display in this format - HH:MM:SS, with three buttons start, stop and reset, it should update the seconds every one second, after 60 sec update to 1 minute after 60min, update to 1hr, on stop button it should stop the watch and should be able to start again, on reset it should reset all values.
+
+algo
+1)Create page layout i.e hh::mm::ss and 3 buttons
+2)create state vars for hour second and minute
+3)create settimeout functions to inc each var after apt. intervals
+4)create onclick function handlers for each vbutton to clear start and stop the timer
