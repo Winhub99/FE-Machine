@@ -19,7 +19,7 @@ const ProductsList = () => {
             return (<span className="products__single" key={product.id}>
               <img src={product.thumbnail} alt={product.title}/>
               <span className="title">{product.title}</span>
-      
+       
               </span>)
           })}
           </div>}
