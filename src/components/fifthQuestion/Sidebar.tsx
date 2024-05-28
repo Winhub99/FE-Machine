@@ -15,6 +15,15 @@ const Sidebar = ({ products }) => {
   const handleCheckboxChange=(discount)=>{
     const newSelectedDiscounts=selectedDiscounts.includes(discount)?selectedDiscounts.filter(disc=> disc!= discount):[...selectedDiscounts,discount]
     setSelectedDiscounts(newSelectedDiscounts)
+
+    if(newSelectedDiscounts.length===0){
+      setFilteredProducts(products)
+    }else{
+      const filtered = products.filter(product=>newSelectedDiscounts.some(discount=>product.discountPercentage>=discount))
+      console.log(filtered);
+      
+      setFilteredProducts(filtered)
+    }
     
   }
   return (
@@ -23,7 +32,7 @@ const Sidebar = ({ products }) => {
       <div className="checkboxes">
         {discounts.map((element) => (<label key={element} >{element}%<input type='checkbox' value={element} onChange={()=>handleCheckboxChange(element)} /></label>))}
         {/* {console.log(allDiscounts)} */}
-        {console.log(selectedDiscounts)}
+        {console.log(filteredProducts)}
       </div>
     </div>
   )
