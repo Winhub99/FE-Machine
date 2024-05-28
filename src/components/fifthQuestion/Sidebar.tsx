@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 
 const Sidebar = ({ products }) => {
-  const discounts = [40, 50, 60, 70]
+  const discounts = [5,10,15,20]
   // let allDiscounts=[]
   if (products.length) {
     const allDiscounts = products.reduce((acc, element) => {
