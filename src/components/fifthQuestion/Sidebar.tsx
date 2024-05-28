@@ -31,7 +31,6 @@ const Sidebar = ({ products }) => {
       <h2>Discount</h2>
       <div className="checkboxes">
         {discounts.map((element) => (<label key={element} >{element}%<input type='checkbox' value={element} onChange={()=>handleCheckboxChange(element)} /></label>))}
-        {/* {console.log(allDiscounts)} */}
         {console.log(filteredProducts)}
       </div>
     </div>
