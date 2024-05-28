@@ -1,10 +1,6 @@
 import React, { useEffect } from 'react'
 
 const Sidebar = ({ products }) => {
-  console.log('printing products');
-  console.log(products);
-
-
   const discounts = [40, 50, 60, 70]
   // let allDiscounts=[]
   if (products.length) {
