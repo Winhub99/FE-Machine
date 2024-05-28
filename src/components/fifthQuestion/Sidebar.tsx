@@ -1,7 +1,9 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 
 const Sidebar = ({ products }) => {
-  const discounts = [40, 50, 60, 70]
+  const [filteredProducts, setFilteredProducts] =useState([])
+   const discounts = [5,10,15,20]
+   const [selectedDiscounts,setSelectedDiscounts] = useState([])
   // let allDiscounts=[]
   if (products.length) {
     const allDiscounts = products.reduce((acc, element) => {
@@ -10,12 +12,18 @@ const Sidebar = ({ products }) => {
     }, [])
     console.log(allDiscounts);
   }
+  const handleCheckboxChange=(discount)=>{
+    const newSelectedDiscounts=selectedDiscounts.includes(discount)?selectedDiscounts.filter(disc=> disc!= discount):[...selectedDiscounts,discount]
+    setSelectedDiscounts(newSelectedDiscounts)
+    
+  }
   return (
     <div>
       <h2>Discount</h2>
       <div className="checkboxes">
-        {discounts.map((element) => (<label >{element}%<input type='checkbox' /></label>))}
+        {discounts.map((element) => (<label key={element} >{element}%<input type='checkbox' value={element} onChange={()=>handleCheckboxChange(element)} /></label>))}
         {/* {console.log(allDiscounts)} */}
+        {console.log(selectedDiscounts)}
       </div>
     </div>
   )
