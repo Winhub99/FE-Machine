@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const Sidebar = ({ products }) => {
+const Sidebar = ({ products , updateFilteredProducts}) => {
   const [filteredProducts, setFilteredProducts] =useState([])
    const discounts = [5,10,15,20]
    const [selectedDiscounts,setSelectedDiscounts] = useState([])
@@ -10,28 +10,19 @@ const Sidebar = ({ products }) => {
       acc.push(element.discountPercentage)
       return acc
     }, [])
-    console.log(allDiscounts);
+   // console.log(allDiscounts);
   }
   const handleCheckboxChange=(discount)=>{
-    const newSelectedDiscounts=selectedDiscounts.includes(discount)?selectedDiscounts.filter(disc=> disc!= discount):[...selectedDiscounts,discount]
+    const newSelectedDiscounts=selectedDiscounts.includes(discount)?selectedDiscounts.filter(disc=> disc!= discount):[...selectedDiscounts,discount]    
     setSelectedDiscounts(newSelectedDiscounts)
-
-    if(newSelectedDiscounts.length===0){
-      setFilteredProducts(products)
-    }else{
-      const filtered = products.filter(product=>newSelectedDiscounts.some(discount=>product.discountPercentage>=discount))
-      console.log(filtered);
-      
-      setFilteredProducts(filtered)
-    }
-    
+    updateFilteredProducts(newSelectedDiscounts)
   }
   return (
     <div>
       <h2>Discount</h2>
       <div className="checkboxes">
         {discounts.map((element) => (<label key={element} >{element}%<input type='checkbox' value={element} onChange={()=>handleCheckboxChange(element)} /></label>))}
-        {console.log(filteredProducts)}
+        {/* {console.log(filteredProducts)} */}
       </div>
     </div>
   )
