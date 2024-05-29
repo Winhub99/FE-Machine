@@ -17,6 +17,8 @@ const MainComponent = () => {
   },[])
 
   const updateFilteredProducts=(selectedDiscounts)=>{
+    console.log('updating selected discountss');
+    
     if(selectedDiscounts.length===0){
       setFilteredProducts(products)
     }else{

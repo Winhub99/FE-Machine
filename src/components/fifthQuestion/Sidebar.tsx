@@ -13,9 +13,11 @@ const Sidebar = ({ products , updateFilteredProducts}) => {
    // console.log(allDiscounts);
   }
   const handleCheckboxChange=(discount)=>{
-    const newSelectedDiscounts=selectedDiscounts.includes(discount)?selectedDiscounts.filter(disc=> disc!= discount):[...selectedDiscounts,discount]    
+    console.log('checkbox clicked');
+    
+    const newSelectedDiscounts=selectedDiscounts.includes(discount)?selectedDiscounts.filter(disc=> disc!= discount):[...selectedDiscounts,discount]
+    updateFilteredProducts(newSelectedDiscounts)    
     setSelectedDiscounts(newSelectedDiscounts)
-    updateFilteredProducts(newSelectedDiscounts)
   }
   return (
     <div>
