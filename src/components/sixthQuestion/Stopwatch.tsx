@@ -19,8 +19,8 @@ const Stopwatch = () => {
       if(startWatch){
          timer=setTimeout(()=>{
           console.log('the seconds are : ',seconds);
-          if(seconds===60){
-              if(minutes===60){
+          if(seconds===59){
+              if(minutes===59){
                   setHours(prev=>prev+1)
                   setMinutes(0)
               }else{
@@ -33,7 +33,7 @@ const Stopwatch = () => {
       }else{
         clearTimeout(timer)
       }
-    //return ()=>clearTimeout(timer)
+    return ()=>clearTimeout(timer)
     
     },[seconds,startWatch])
     
