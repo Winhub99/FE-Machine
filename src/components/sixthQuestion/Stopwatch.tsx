@@ -7,18 +7,24 @@ const Stopwatch = () => {
     const [startWatch,setStartwatch] = useState(false)
 
     const startHandler=()=>{
-      console.log("The start watch value is:",startWatch);
+  //    console.log("The start watch value is:",startWatch);
       
       setStartwatch(true)
   }
   const stoptimerHandler=()=>{
     setStartwatch(false)
   }
+  const resetClockHandler=()=>{
+    setHours(0)
+    setMinutes(0)
+    setSeconds(0)
+    setStartwatch(false)
+  }
     useEffect(()=>{ 
       let timer;
       if(startWatch){
          timer=setTimeout(()=>{
-          console.log('the seconds are : ',seconds);
+      //    console.log('the seconds are : ',seconds);
           if(seconds===59){
               if(minutes===59){
                   setHours(prev=>prev+1)
@@ -47,7 +53,7 @@ const Stopwatch = () => {
       <div style={{display:'flex', gap:'10px'}}>
         <button onClick={stoptimerHandler}>Stop</button>
         <button onClick={startHandler}>Start</button>
-        <button>Clear</button>
+        <button onClick={resetClockHandler}>Clear</button>
       </div>
     </div>
   )
