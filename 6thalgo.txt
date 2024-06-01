@@ -5,3 +5,5 @@ algo
 2)create state vars for hour second and minute
 3)create settimeout functions to inc each var after apt. intervals
 4)create onclick function handlers for each vbutton to clear start and stop the timer
+
+5)useEffect based on a condition
