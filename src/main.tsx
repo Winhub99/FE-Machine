@@ -6,6 +6,7 @@ import ThirdQuestion from './components/ThirdQuestion.tsx'
 import FifthQuestion from './components/FifthQuestion.tsx'
 import MainComponent from './components/fifthQuestion/MainComponent.tsx'
 import Stopwatch from './components/sixthQuestion/Stopwatch.tsx'
+import SeventhQuestion from './components/sixthQuestion/SeventhQuestion.tsx'
 
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
@@ -13,6 +14,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     {/* <ThirdQuestion/> */}
     {/* <FifthQuestion/> */}
     {/* <MainComponent/> */}
-    <Stopwatch/>
+    {/* <Stopwatch/> */}
+    <SeventhQuestion/>
   </React.StrictMode>,
 )
