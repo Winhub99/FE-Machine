@@ -1,1 +1,7 @@
 Build an input box and a button to store items in an array, and have another button to find the second largest element from the stored array. Also, the array of items should be displayed along with the second-largest number.
+Steps)
+1->create a state var with empty array
+2->create an input element and a button 
+    2.1-> attach a handler to this button that pushes element in the array
+3->display the contents of array
+4->find second largest array and display it    
