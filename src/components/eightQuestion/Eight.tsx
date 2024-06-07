@@ -6,9 +6,9 @@ const Eight = () => {
 
     const addElementToItems=()=>{
         console.log("adding elemet to array");
-        
         items.push(element)
-        console.log(items);
+       
+        console.log(items)
         
     }
   return (
@@ -19,7 +19,11 @@ const Eight = () => {
     </div>
     <div style={{display:'flex',flexDirection:'row',gap:'10px'}}>
         {items.map(item=><span key={item}>{item}</span>)}
+        {items.sort((a,b)=>(a-b))}
+        
     </div>
+    <h2>The Second largest element is: </h2>
+    <h3>{items[1]}</h3>
 
     </>
   )
