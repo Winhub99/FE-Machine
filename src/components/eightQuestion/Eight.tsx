@@ -17,10 +17,10 @@ const Eight = () => {
       <input type="text" onChange = {(e)=>{setElement(parseInt(e.target.value))}}/>
       <button onClick={addElementToItems}>Add</button>
     </div>
-    <span>
-        {console.log(items) }
-    </span>
-    
+    <div style={{display:'flex',flexDirection:'row',gap:'10px'}}>
+        {items.map(item=><span key={item}>{item}</span>)}
+    </div>
+
     </>
   )
 }
