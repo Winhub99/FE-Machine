@@ -8,7 +8,7 @@ import MainComponent from './components/fifthQuestion/MainComponent.tsx'
 import Stopwatch from './components/sixthQuestion/Stopwatch.tsx'
 import SeventhQuestion from './components/sixthQuestion/SeventhQuestion.tsx'
 import Eight from './components/eightQuestion/Eight.tsx'
-
+import NinthQuestion from './components/NinthQuestion.js'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     {/* <App /> */}
@@ -17,6 +17,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     {/* <MainComponent/> */}
     {/* <Stopwatch/> */}
     {/* <SeventhQuestion/> */}
-    <Eight/>
+    {/* <Eight/> */}
+    <NinthQuestion/>
   </React.StrictMode>,
 )
