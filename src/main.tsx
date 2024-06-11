@@ -18,6 +18,8 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     {/* <Stopwatch/> */}
     {/* <SeventhQuestion/> */}
     {/* <Eight/> */}
-    <NinthQuestion dataType="text" />
+    {/* <NinthQuestion dataType="text" /> */}
+    <NinthQuestion dataType="number" />
+
   </React.StrictMode>,
 )
