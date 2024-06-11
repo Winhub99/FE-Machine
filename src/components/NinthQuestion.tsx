@@ -1,16 +1,17 @@
-import React from 'react'
+import React, { useState } from 'react'
 
-const NinthQuestion = ({type}) => {
+const NinthQuestion = ({dataType}) => {
 
-
+  const [inputValue,setInputValue] = useState()
   const validate=(e)=>{
-    console.log('the data type of input is : ',type);
+    console.log('the data: ',dataType);
+    
     
   }
   return (
     <div>
       <h2>Type Checker</h2>
-      <input type={type} onChange={(e)=>validate(e)} />
+      <input type={dataType} onChange={(e)=>validate(e)} value={inputValue} />
     </div>
   )
 }
