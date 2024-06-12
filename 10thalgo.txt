@@ -1,2 +1,3 @@
 Create a multi-step form, where next and previous button are there on the last page user should be able to submit the form, on previous click the data entered should be persisted.
 steps->Google and understand
+//Write algo here
