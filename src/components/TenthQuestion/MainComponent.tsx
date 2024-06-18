@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import FirstStep from './FirstStep'
 import SecondStep from './SecondStep'
+import ThirdComponent from './ThirdComponent'
 
 const MainComponent = () => {
   const [currentStep,setCurrentStep] = useState(1)
@@ -31,6 +32,8 @@ const MainComponent = () => {
       Multi Step Form 
      {currentStep=== 1 && <FirstStep formData={formData} handleChange={handleChange}/>} 
      {currentStep=== 2 && <SecondStep formData={formData} handleChange={handleChange}/>}
+     {currentStep=== 3 && <ThirdComponent formData={formData} handleChange={handleChange}/>}
+
     </div>
     <div>
       {currentStep > 1 && <button onClick={previousHandler}>Prev</button>}
