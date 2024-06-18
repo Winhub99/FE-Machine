@@ -26,6 +26,11 @@ const MainComponent = () => {
   const previousHandler = ()=>{
     setCurrentStep(prev => prev-1)
   }
+  const submitHandler = ()=>{
+    console.log(formData);
+    
+  }
+
   return (
     <>
     <div>
@@ -38,6 +43,7 @@ const MainComponent = () => {
     <div>
       {currentStep > 1 && <button onClick={previousHandler}>Prev</button>}
       {currentStep < 3 && <button onClick={nextHandler}>Next</button> }
+      {currentStep === 3 && <button onClick={submitHandler}>Submit</button> }
     </div>
     </>
   )
