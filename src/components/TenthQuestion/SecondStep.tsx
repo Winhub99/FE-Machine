@@ -4,7 +4,7 @@ const SecondStep = ({handleChange,formData}) => {
   return (
     <div>
       <h2>Second step</h2>
-      Education: <input type="text" name='education' value={formData.education} onChange={handleChange}/>
+      Education: <input type="text" name='education' value={formData.education} onChange={handleChange}/><br/>
       Age: <input type="number"  name='age' value={formData.age} onChange={handleChange}/>
     </div>
   )
