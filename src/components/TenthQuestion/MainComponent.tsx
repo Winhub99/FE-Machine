@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import FirstStep from './FirstStep'
 
 const MainComponent = () => {
   const [currentStep,setCurrentStep] = useState(1)
@@ -11,9 +12,15 @@ const MainComponent = () => {
     pincode:0
   })
 
+  const handleChange=(e)=>{
+    const {name,value} = e.target;
+    setFormData(prev=>({...prev,[name]:value}))
+  }
+
   return (
     <div>
-      Main comonent
+      Multi Step Form 
+     <FirstStep formData={formData} />
     </div>
   )
 }
