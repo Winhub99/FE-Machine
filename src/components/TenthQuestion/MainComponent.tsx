@@ -17,11 +17,24 @@ const MainComponent = () => {
     setFormData(prev=>({...prev,[name]:value}))
   }
 
+  const nextHandler = ()=>{
+    setCurrentStep(prev=>prev+1)
+  }
+
+  const previousHandler = ()=>{
+    setCurrentStep(prev => prev-1)
+  }
   return (
+    <>
     <div>
       Multi Step Form 
-     <FirstStep formData={formData} />
+     <FirstStep formData={formData} handleChange={handleChange}/>
     </div>
+    <div>
+      {currentStep > 1 && <button onClick={previousHandler}>Prev</button>}
+      {currentStep < 3 && <button onClick={nextHandler}>Next</button> }
+    </div>
+    </>
   )
 }
 
