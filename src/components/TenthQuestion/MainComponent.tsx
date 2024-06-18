@@ -28,7 +28,8 @@ const MainComponent = () => {
     <>
     <div>
       Multi Step Form 
-     <FirstStep formData={formData} handleChange={handleChange}/>
+     {currentStep=== 1 && <FirstStep formData={formData} handleChange={handleChange}/>} 
+     {currentStep=== 2 && <FirstStep formData={formData} handleChange={handleChange}/>}
     </div>
     <div>
       {currentStep > 1 && <button onClick={previousHandler}>Prev</button>}
