@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import FirstStep from './FirstStep'
+import SecondStep from './SecondStep'
 
 const MainComponent = () => {
   const [currentStep,setCurrentStep] = useState(1)
@@ -29,7 +30,7 @@ const MainComponent = () => {
     <div>
       Multi Step Form 
      {currentStep=== 1 && <FirstStep formData={formData} handleChange={handleChange}/>} 
-     {currentStep=== 2 && <FirstStep formData={formData} handleChange={handleChange}/>}
+     {currentStep=== 2 && <SecondStep formData={formData} handleChange={handleChange}/>}
     </div>
     <div>
       {currentStep > 1 && <button onClick={previousHandler}>Prev</button>}
