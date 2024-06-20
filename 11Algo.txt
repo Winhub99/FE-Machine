@@ -1,1 +1,5 @@
 Create a component which converts the input to ascii, add 10 to it and convert the same from char code.
+step1) convert charcter to ascii
+step2) Add 10 to it
+step3) covert back to char
+step4) display output
