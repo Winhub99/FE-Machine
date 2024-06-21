@@ -1,9 +1,9 @@
-import React, { useState } from 'react'
+import  { useState } from 'react'
 
 const EleventhQuestion = () => {
     const [textInput,setTextInput] = useState('')
     const [modifiedText,setModidfiedText] = useState('')
-    const handleChange=(e)=>{
+    const handleChange=(e: { target: { value: any } })=>{
         const str = e.target.value
         setTextInput(str)
         console.log(str);
@@ -22,8 +22,8 @@ const EleventhQuestion = () => {
   return (
     <>
     <div>
-      <h2>Ascii COnversion from char</h2>
-      Text:<input type="text" onChange={handleChange} />
+      <h2>Ascii Conversion from char</h2>
+      Text:<input type="text" value={textInput} onChange={handleChange} />
     </div>
     <div>
         <h2>Converted Text:</h2>
