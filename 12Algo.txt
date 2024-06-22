@@ -1,0 +1,1 @@
+Validate form name (must not be empty and less than 100 characters allow); age (between 18-99) email(valid email) password(at least 8 characters) re-password(password and re-password same) show error message in the alert box!
