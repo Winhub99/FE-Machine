@@ -1,4 +1,4 @@
 Validate form name (must not be empty and less than 100 characters allow); age (between 18-99) email(valid email) password(at least 8 characters) re-password(password and re-password same) show error message in the alert box!
 step1) write validations
 step2)crraate va for error 
-step3( throw erroe when validation fails acc. to input)
+step3)throw erroe when validation fails acc. to input)
