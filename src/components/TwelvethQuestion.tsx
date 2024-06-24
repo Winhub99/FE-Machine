@@ -12,7 +12,25 @@ const TwelvethQuestion = () => {
     const setFormDataHandler=(e)=>{
         const {name,value} = e.target
         console.log(`the name of changing var is: ${name} and the value is ${value}` );
+        setFormData((prev)=>({...prev,[name]:value}))
+        console.log(formData);
         
+        
+    }
+    const checkValidations=()=>{
+        console.log('checking validations');
+        
+        if(formData.firstname.length===0 || formData.firstname.length>100 ){
+            console.log(formData.firstname.length);
+            
+            alert('Name should be greter than 1 and less than 100')
+        }
+        if(formData.age<18 || formData.age>99 ){
+            alert('enter valid age')
+        }
+        if(!formData.email.includes('.com')){
+            alert('Enter valid email')
+        }
     }
   return (
     <div>
@@ -38,7 +56,7 @@ const TwelvethQuestion = () => {
         Re-enter Password:
         </label>
         <input type="text" name='re-password' onChange={setFormDataHandler}/><br/>
-        <button type='submit'>Submit</button>
+        <button type='submit' onClick={checkValidations}>Submit</button>
       </form>
     </div>
   )
