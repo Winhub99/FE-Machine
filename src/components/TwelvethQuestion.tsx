@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 
 const TwelvethQuestion = () => {
 
@@ -9,7 +9,7 @@ const TwelvethQuestion = () => {
         password:''
     })
 
-    const setFormDataHandler=(e)=>{
+    const setFormDataHandler=(e: { target: { name: any; value: any } })=>{
         const {name,value} = e.target
         console.log(`the name of changing var is: ${name} and the value is ${value}` );
         setFormData((prev)=>({...prev,[name]:value}))
