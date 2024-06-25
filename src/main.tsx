@@ -12,6 +12,7 @@ import NinthQuestion from './components/NinthQuestion.js'
 import MainComponent from './components/TenthQuestion/MainComponent.tsx'
 import EleventhQuestion from './components/EleventhQuestion.tsx'
 import TwelvethQuestion from './components/TwelvethQuestion.tsx'
+import ThiteenthQuestion from './components/ThiteenthQuestion.tsx'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     {/* <App /> */}
@@ -25,6 +26,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
     {/* <NinthQuestion dataType="number" /> */}
   {/* <MainComponent/> */}
   {/* <EleventhQuestion/> */}
-  <TwelvethQuestion/>
+  {/* <TwelvethQuestion/> */}
+  <ThiteenthQuestion/>
   </React.StrictMode>,
 )
