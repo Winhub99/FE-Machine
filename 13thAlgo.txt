@@ -1,0 +1,3 @@
+create a toast message using Javascript/ React , it should disappear automatically after 5sec.
+
+algo) straight forward
