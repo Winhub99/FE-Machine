@@ -1,0 +1,1 @@
+Create a Reusable react card, header and type is passed as props, style of that card should be determined by type of card it is through prop : like type="facebook" some style, for "twitter" some other style, some nested components inside the body of card, they should also have styles.
