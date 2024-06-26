@@ -1,0 +1,1 @@
+On check/uncheck of top checkbox, all checkboxes should be checked/unchecked and vice-versa. We should be able to individualy check/uncheck checkbox from the list. If any of the checkbox is unchecked, the top checkbox should show an intermediate symbol. A button below the checkbox, which when clicked should console log only the Id of the checked checkbox.
