@@ -14,6 +14,7 @@ import EleventhQuestion from './components/EleventhQuestion.tsx'
 import TwelvethQuestion from './components/TwelvethQuestion.tsx'
 import ThiteenthQuestion from './components/ThiteenthQuestion.tsx'
 import FourteenthQuestion from './components/FourteenthQuestion.tsx'
+import QuadrantComponent from './components/Sixteenth/QuadrantComponent.tsx'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     {/* <App /> */}
@@ -29,6 +30,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   {/* <EleventhQuestion/> */}
   {/* <TwelvethQuestion/> */}
   {/* <ThiteenthQuestion/> */}
-  <FourteenthQuestion/>
+  {/* <FourteenthQuestion/> */}
+  <QuadrantComponent/>
   </React.StrictMode>,
 )
