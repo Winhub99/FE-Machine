@@ -1,8 +1,7 @@
 import  { useEffect, useState } from 'react'
 
-const QuadrantComponent = () => {
+const QuadrantComponent = ({clicked, setClicked}) => {
    
-    const [clicked,setClicked] = useState(false)
     
     const clickHandler = ()=>{
 
