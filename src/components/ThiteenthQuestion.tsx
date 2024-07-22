@@ -12,7 +12,7 @@ const ThiteenthQuestion = () => {
     },[])
   return (
     <div>
-      <h2>Display Toast here</h2>
+      <h2>Display thge Toast here</h2>
     </div>
   )
 }
