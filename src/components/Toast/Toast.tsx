@@ -6,8 +6,8 @@ const Toast = ({ message, onClose }) => {
             onClose();
         }, 5000);
 
-        return () => clearTimeout(timer); // Cleanup the timer on component unmount
-    }, [onClose]);
+        // return () => clearTimeout(timer); // Cleanup the timer on component unmount
+    }, []);
 
     return (
         <div style={styles.toast}>

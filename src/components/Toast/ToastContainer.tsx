@@ -9,6 +9,8 @@ const ToastContainer = () => {
     };
 
     const hideToast = () => {
+        console.log('clearing message');
+        
         setToastMessage('');
     };
 
