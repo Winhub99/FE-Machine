@@ -1,6 +1,10 @@
-import  {  useEffect } from 'react';
+import  React, {  useEffect } from 'react';
 
-const Toast = ({ message, onClose }) => {
+interface ToastProps{
+    message: string,
+    onClose:()=> void
+}
+const Toast: React.FC<ToastProps> = ({ message, onClose }) => {
     useEffect(() => {
         const timer = setTimeout(() => {
             onClose();
@@ -26,7 +30,7 @@ const styles = {
         padding: '10px 20px',
         borderRadius: '5px',
         zIndex: 1000,
-    },
+    } as React.CSSProperties,
 };
 
 export default Toast;
