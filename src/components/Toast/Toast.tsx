@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import  {  useEffect } from 'react';
 
 const Toast = ({ message, onClose }) => {
     useEffect(() => {
@@ -10,7 +10,7 @@ const Toast = ({ message, onClose }) => {
     }, [onClose]);
 
     return (
-        <div style={styles.toast}>
+        <div style ={styles.toast}>
             {message}
         </div>
     );
