@@ -4,7 +4,7 @@ import Toast from './Toast';
 const ToastContainer = () => {
     const [toastMessage, setToastMessage] = useState('');
 
-    const showToast = (message) => {
+    const showToast = (message:string) => {
         setToastMessage(message);
     };
 
