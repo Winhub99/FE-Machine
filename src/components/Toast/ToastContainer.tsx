@@ -17,7 +17,7 @@ const ToastContainer = () => {
     return (
         <div>
             <h1>Toast Example</h1>
-            <button onClick={() => showToast('This is a toast message!!!')}>Show Toast</button>
+            <button onClick={() => showToast('This is a toast message!!')}>Show Toast</button>
             {toastMessage && <Toast message={toastMessage} onClose={hideToast} />}
         </div>
     );
