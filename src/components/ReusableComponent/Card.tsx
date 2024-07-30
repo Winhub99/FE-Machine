@@ -4,7 +4,6 @@ interface CardProps{
   header:string;
   type: 'Facebook' | 'Twitter' | 'Default';
   children:React.ReactNode;
-
 }
 
 const Card:React.FC<CardProps> = ({header,type,children}) => {
