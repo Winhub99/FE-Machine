@@ -1,6 +1,12 @@
 import React from 'react'
 
-const Card = ({header,type}) => {
+interface CardProps{
+  header:string;
+  type: 'Facebook' | 'Twitter' | 'Insta';
+
+}
+
+const Card:React.FC<CardProps> = ({header,type}) => {
   return (
     <div>
       {header}
