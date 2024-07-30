@@ -4,7 +4,7 @@ import Card from './Card'
 const ReusableCard = () => {
   return (
     <div>
-      <Card header="FaceBook Header" type=""/>
+      <Card header="FaceBook Header" type="Twitter"/>
     </div>
   )
 }
