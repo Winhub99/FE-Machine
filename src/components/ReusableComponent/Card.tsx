@@ -2,7 +2,7 @@ import React from 'react'
 
 interface CardProps{
   header:string;
-  type: 'Facebook' | 'Twitter' | 'Insta';
+  type: 'Facebook' | 'Twitter' | 'Default';
 
 }
 
@@ -30,17 +30,17 @@ const styles: { [key: string]: React.CSSProperties } = {
   body: {
       fontSize: '1em',
   },
-  facebook: {
+  Facebook: {
       borderColor: '#1877f2',
       backgroundColor: '#f0f2f5',
       color: '#1877f2',
   },
-  twitter: {
+  Twitter: {
       borderColor: '#1da1f2',
       backgroundColor: '#e8f5fd',
       color: '#1da1f2',
   },
-  default: {
+  Default: {
       borderColor: '#ccc',
       backgroundColor: '#fff',
       color: '#000',
