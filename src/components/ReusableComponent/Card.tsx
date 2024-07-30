@@ -9,7 +9,10 @@ interface CardProps{
 const Card:React.FC<CardProps> = ({header,type}) => {
   return (
     <div style={{...styles.card,...styles[type]}}>
+      <div style={styles.header}>
       {header}
+      </div>
+      
     </div>
   )
 }
