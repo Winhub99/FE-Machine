@@ -3,15 +3,19 @@ import React from 'react'
 interface CardProps{
   header:string;
   type: 'Facebook' | 'Twitter' | 'Default';
+  children:React.ReactNode;
 
 }
 
-const Card:React.FC<CardProps> = ({header,type}) => {
+const Card:React.FC<CardProps> = ({header,type,children}) => {
   return (
     <div style={{...styles.card,...styles[type]}}>
       <div style={styles.header}>
       {header}
       </div>
+      <div style={styles.body}>
+                {children}
+       </div>
       
     </div>
   )
