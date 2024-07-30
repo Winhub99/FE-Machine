@@ -16,6 +16,7 @@ import ThiteenthQuestion from './components/ThiteenthQuestion.tsx'
 import FourteenthQuestion from './components/FourteenthQuestion.tsx'
 import LogoComponent from './components/Sixteenth/LogoComponent.tsx'
 import ToastContainer from './components/Toast/ToastContainer.tsx'
+import ReusableCard from './components/ReusableComponent/ReusableCard.tsx'
 ReactDOM.createRoot(document.getElementById('root')!).render(
   <React.StrictMode>
     {/* <App /> */}
@@ -33,6 +34,7 @@ ReactDOM.createRoot(document.getElementById('root')!).render(
   {/* <ThiteenthQuestion/> */}
   {/* <FourteenthQuestion/> */}
   {/* <LogoComponent/> */}
-  <ToastContainer/>
+  {/* <ToastContainer/> */}
+  <ReusableCard/>
   </React.StrictMode>,
 )
