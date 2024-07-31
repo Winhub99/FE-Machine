@@ -2,4 +2,4 @@ step 1
 1) create a card 
 1.1) Pass header,type and childern as prop
 2)create objects for adding / defining styles and dynamic styles
-3) create multiple cards of different types
+3) create multiple cards for different types by passing these as props
