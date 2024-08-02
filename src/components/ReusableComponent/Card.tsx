@@ -3,7 +3,7 @@ import React from 'react'
 interface CardProps{
   header:string;
   type: 'Facebook' | 'Twitter' | 'Default';
-  children:React.ReactNode;
+  children:React.ReactNode; 
 }
 
 const Card:React.FC<CardProps> = ({header,type,children}) => {
