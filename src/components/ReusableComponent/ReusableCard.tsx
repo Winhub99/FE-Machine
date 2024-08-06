@@ -10,7 +10,7 @@ const ReusableCard = () => {
                 <p>This is a post on Facebook!</p>
             </Card>
             <Card header="Default Header" type="Default">
-                <p>This is a default card with no specific type styling!</p>
+                <p>This is a default card with no specific type styling.</p>
             </Card>
 
 
